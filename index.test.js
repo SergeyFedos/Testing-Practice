@@ -1,5 +1,5 @@
 
-const { capitalize, reverseString, calculator } = require('./index.js')
+const { capitalize, reverseString, calculator, caesarCipher, analyzeArray } = require('./index.js')
 
 describe('capitalize function', () => {
   test('capitalizes the first character of a string', () => expect(capitalize('hello world')).toBe('Hello world'));
@@ -40,6 +40,15 @@ describe('caesar cipher', () => {
 
   test('works with punctuation, spaces, and other non-alphabetical characters', () => expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!'))
 
+})
+
+describe('analyze array', () => {
+  test('takes an array of numbers and returns an object with the following properties', () => expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+  }));
 
 
 })
